@@ -5,6 +5,7 @@
 FLAGS=-Werror -Wextra -Wall -Wno-error=missing-field-initializers -Werror=sign-compare
 FLAGS_C=$(FLAGS) -Wmissing-prototypes -Wstrict-prototypes -Werror=discarded-qualifiers
 FLAGS_CXX=$(FLAGS)
+CFLAGS=-I/usr/include/python3.10
 
 all:
 	CFLAGS="-isystem./include -isystem./include/uapi $(FLAGS_C) $(CFLAGS)" $(MAKE) -C module $(MFLAGS)
